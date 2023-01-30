@@ -7,6 +7,11 @@ Pictogram is an app that will allow the user to create, edit and post images of 
 rate the posting. 
 
 ## 2. Top Questions to Resolve in Review
+1. Who will being using this?
+2. What's the purpose of this app being made?
+3. What makes this different from Instagram?
+4. How will users interact with other posting?
+5. How will this benefit photographers/users?
 
 ## 3. Use Cases
 The main navigation will be a bottom tab bar, with tabs for "Home," "Explore," "Upload," "Profile."
@@ -33,6 +38,7 @@ U9. Users will be able to delete comments on their posting.
 
 U10. Users will be able to delete their images.
 
+## 4. Project Scope
 ## 4.1. In Scope
 * Users can signup.
 * Upload images.
@@ -47,3 +53,50 @@ U10. Users will be able to delete their images.
 * Users can receive notifications for new followers, likes and comments on their post.
 * Manage settings.
 
+## 5. Architecture Overview
+Pages:
+* Home: Login/Create account, refresh page.
+* Explore: See other users postings, refresh page.
+* Upload: Allows users to upload images to the application.
+* Profile: Allows users to see their uploads, profile picture, bio, etc.
+
+Tables: 
+* User Table
+* Upload Table 
+
+## 6. API
+## 6.1. Public Models
+```
+// Image Model
+
+String uploadID;
+String 
+
+```
+## 6.1.1 CreateUser
+* Accepts `POST` requests to `/user`.
+* Creates a new User with a uniqueID.
+## 6.2. GetUser
+* Accepts `GET` requests to `/user/ID`.
+* Returns the corresponding userID.
+## 6.3. CreateUpload
+* Accepts `POST` requests to `/upload`.
+* Creates a uniqueID for that upload.
+## 6.4. GetUpload
+* Accepts `GET` requests to `/upload/ID`.
+* Returns upload with that uniqueID.
+## 6.5. DeleteUpload
+* Accepts `DELETE` requests to `/upload/ID`.
+* Deletes the upload by the uniqueID.
+## 6.6. CreateComments
+* Accepts `POST` requests to `/upload/ID/Comments`.
+* Creates a comment for that upload.
+## 6.7. GetComments
+* Accepts `GET` requests to `/upload/ID/Comments`.
+* Return comments for that upload
+## 6.8. UpdateComments
+* Accepts `PUT` requests to `/upload/ID/Comments`.
+* Update comments for that upload.
+## 6.9. DeleteComments
+* Accepts `DELETE` requests to `/upload/ID/Comments`.
+* Delete comments for that upload.
