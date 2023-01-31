@@ -61,17 +61,41 @@ Pages:
 * Profile: Allows users to see their uploads, profile picture, bio, etc.
 
 Tables: 
-* User Table
-* Upload Table 
+```
+  User Table
+  --------------------------------
+  userId:String, partition key
+  userName:String
+  password:String
+```
 
+```
+  Upload Table
+  --------------------------------
+  uploadId:String, partition key
+  date:LocalDate, sort key
+  comments:String
+  captions:String
+```
 ## 6. API
 ## 6.1. Public Models
 ```
 // Image Model
-
-String uploadID;
-String 
-
+String uploadId; HashKey
+String comments;
+String captions;
+LocalDate date; SortKey
+```
+``` 
+// User Model
+String userId; HashKey
+String userName; SortKey
+String passWord;
+```
+``` 
+// Album Model
+String albumId; HashKey
+String albumName; SortKey
 ```
 ## 6.1.1 CreateUser
 * Accepts `POST` requests to `/user`.
