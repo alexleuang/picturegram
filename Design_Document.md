@@ -92,20 +92,17 @@ String userId; HashKey
 String userName; SortKey
 String passWord;
 ```
-``` 
-// Album Model
-String albumId; HashKey
-String albumName; SortKey
-```
 ## 6.1.1 CreateUser
 * Accepts `POST` requests to `/user`.
 * Creates a new User with a uniqueID.
+* Returns the corresponding user with the uniqueID.
 ## 6.2. GetUser
 * Accepts `GET` requests to `/user/ID`.
 * Returns the corresponding userID.
 ## 6.3. CreateUpload
 * Accepts `POST` requests to `/upload`.
 * Creates a uniqueID for that upload.
+* Returns the corresponding upload with that uniqueID.
 ## 6.4. GetUpload
 * Accepts `GET` requests to `/upload/ID`.
 * Returns upload with that uniqueID.
@@ -115,12 +112,20 @@ String albumName; SortKey
 ## 6.6. CreateComments
 * Accepts `POST` requests to `/upload/ID/Comments`.
 * Creates a comment for that upload.
+* Returns the comment for that uploadID.
 ## 6.7. GetComments
 * Accepts `GET` requests to `/upload/ID/Comments`.
 * Return comments for that upload
 ## 6.8. UpdateComments
 * Accepts `PUT` requests to `/upload/ID/Comments`.
 * Update comments for that upload.
+* Returns the updated comments.
 ## 6.9. DeleteComments
 * Accepts `DELETE` requests to `/upload/ID/Comments`.
 * Delete comments for that upload.
+## 6.10. CreateCaption
+* Accepts `POST` requests to `/upload/ID/Caption`.
+* Create a caption for that uploadID.
+* Return captions for that uploadID.
+
+
