@@ -64,7 +64,7 @@ Tables:
 ```
   User Table
   --------------------------------
-  userId:String, partition key
+  userId:String, partition key 
   userName:String
   password:String
 ```
