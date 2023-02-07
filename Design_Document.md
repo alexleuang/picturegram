@@ -60,78 +60,66 @@ Pages:
 * Upload: Allows users to upload images to the application.
 * Profile: Allows users to see their uploads, profile picture, bio, etc.
 
-Tables: 
+Tables:
 ```
-  User Table
+  Image Table
   --------------------------------
-  userId:String, partition key 
-  userName:String
+  userImage:String, partition key
+  dateTime:LocalDateTime
+  caption:String
 ```
 ```
   Comments Table
   --------------------------------
-  userId:String, partition key 
+  userEmail:String, partition key 
+  userId:String
   dateTime:LocalDateTime, sort key
   imageId:String
-  userName:String
-  comments:String
-```
-```
-  Image Table
-  --------------------------------
-  imageId:String, partition key
-  dateTime:LocalDateTime, sort key
-  comments:String
-  captions:String
+  comment:String
 ```
 ## 6. API
 ## 6.1. Public Models
 ```
 // Image Model
-String imageId; HashKey
-String comments;
-String captions;
+String userImage; HashKey
+String caption;
 LocalDate date; SortKey
 ```
 ``` 
-// User Model
-String userId; HashKey
-String userName; SortKey
+// Comments Model
+String userEmail; HashKey
+String userId; SortKey
+LocalDateTime dateTime;
+String imageId;
+String comment;
 ```
-## 6.1.1 CreateUser
-* Accepts `POST` requests to `/user`.
-* Creates a new User with a uniqueID.
-* Returns the corresponding user with the uniqueID.
-## 6.2. GetUser
-* Accepts `GET` requests to `/user/ID`.
-* Returns the corresponding userID.
-## 6.3. CreateImage
+## 6.1. CreateImage
 * Accepts `POST` requests to `/Image`.
 * Creates a uniqueID for that upload.
 * Returns the corresponding upload with that uniqueID.
-## 6.4. GetImage
+## 6.2. GetImage
 * Accepts `GET` requests to `/image/ID`.
 * Returns upload with that uniqueID.
-## 6.5. DeleteUpload
+## 6.3. DeleteImage
 * Accepts `DELETE` requests to `/image/ID`.
 * Deletes the upload by the uniqueID.
-## 6.6. CreateComments
-* Accepts `POST` requests to `/upload/ID/Comments`.
+## 6.4. CreateComments
+* Accepts `POST` requests to `/userImage/ID/Comments`.
 * Creates a comment for that upload.
 * Returns the comment for that uploadID.
-## 6.7. GetComments
-* Accepts `GET` requests to `/upload/ID/Comments`.
+## 6.5. GetComments
+* Accepts `GET` requests to `/userImage/ID/Comments`.
 * Return comments for that upload
-## 6.8. UpdateComments
-* Accepts `PUT` requests to `/upload/ID/Comments`.
+## 6.6. UpdateComments
+* Accepts `PUT` requests to `/userImage/ID/Comments`.
 * Update comments for that upload.
 * Returns the updated comments.
-## 6.9. DeleteComments
-* Accepts `DELETE` requests to `/upload/ID/Comments`.
+## 6.7. DeleteComments
+* Accepts `DELETE` requests to `/userImage/ID/Comments`.
 * Delete comments for that upload.
-## 6.10. CreateCaption
-* Accepts `POST` requests to `/upload/ID/Caption`.
-* Create a caption for that uploadID.
-* Return captions for that uploadID.
+## 6.8. CreateCaption
+* Accepts `POST` requests to `/userImage/ID/Caption`.
+* Create a caption for that userImage.
+* Return captions for that userImage.
 
 
