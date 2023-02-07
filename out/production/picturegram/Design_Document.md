@@ -66,21 +66,14 @@ Tables:
   --------------------------------
   userId:String, partition key 
   userName:String
+  password:String
 ```
+
 ```
-  Comments Table
+  Upload Table
   --------------------------------
-  userId:String, partition key 
-  dateTime:LocalDateTime, sort key
-  imageId:String
-  userName:String
-  comments:String
-```
-```
-  Image Table
-  --------------------------------
-  imageId:String, partition key
-  dateTime:LocalDateTime, sort key
+  uploadId:String, partition key
+  date:LocalDate, sort key
   comments:String
   captions:String
 ```
@@ -88,7 +81,7 @@ Tables:
 ## 6.1. Public Models
 ```
 // Image Model
-String imageId; HashKey
+String uploadId; HashKey
 String comments;
 String captions;
 LocalDate date; SortKey
@@ -97,6 +90,7 @@ LocalDate date; SortKey
 // User Model
 String userId; HashKey
 String userName; SortKey
+String passWord;
 ```
 ## 6.1.1 CreateUser
 * Accepts `POST` requests to `/user`.
@@ -105,15 +99,15 @@ String userName; SortKey
 ## 6.2. GetUser
 * Accepts `GET` requests to `/user/ID`.
 * Returns the corresponding userID.
-## 6.3. CreateImage
-* Accepts `POST` requests to `/Image`.
+## 6.3. CreateUpload
+* Accepts `POST` requests to `/upload`.
 * Creates a uniqueID for that upload.
 * Returns the corresponding upload with that uniqueID.
-## 6.4. GetImage
-* Accepts `GET` requests to `/image/ID`.
+## 6.4. GetUpload
+* Accepts `GET` requests to `/upload/ID`.
 * Returns upload with that uniqueID.
 ## 6.5. DeleteUpload
-* Accepts `DELETE` requests to `/image/ID`.
+* Accepts `DELETE` requests to `/upload/ID`.
 * Deletes the upload by the uniqueID.
 ## 6.6. CreateComments
 * Accepts `POST` requests to `/upload/ID/Comments`.
