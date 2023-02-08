@@ -121,16 +121,7 @@ String comment;
 ## 6.5. GetComments
 * Accepts `GET` requests to `/userImage/ID/Comments`.
 * Return comments for that upload
-## 6.6. UpdateComments
-* Accepts `PUT` requests to `/userImage/ID/Comments`.
-* Update comments for that upload.
-* Returns the updated comments.
-## 6.7. DeleteComments
+## 6.6. DeleteComments
 * Accepts `DELETE` requests to `/userImage/ID/Comments`.
 * Delete comments for that upload.
-## 6.8. CreateCaption
-* Accepts `POST` requests to `/userImage/ID/Caption`.
-* Create a caption for that userImage.
-* Return captions for that userImage.
-
 
