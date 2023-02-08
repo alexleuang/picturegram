@@ -28,15 +28,17 @@ U5. Users will be able to create an account. (Sign up)
 
 U6. Users will be able to upload images.
 
-U7. Users will be able to delete their images.
+U7. Users of the image will be able to delete their images.
 
-U8. Users will be able to sort images by Date and time.
+U8. Users of the image will be able to sort images by Date and time.
 
-U9. Users will be able to add captions to the images.
+U9. Users of the image will be able to add captions to the images.
 
-U10. Users will be able to comment on other users post.
+U10. Users of the image and other users will be able to comment on each other post.
 
-U11. Users will be able to delete comments on their posting.
+U11. Both users will be able to edit their own comments on the image/post.
+
+U12. Users of the image will be able to delete comments on their posting and so will other users.
 
 
 ## 4. Project Scope
