@@ -16,42 +16,50 @@ rate the posting.
 ## 3. Use Cases
 The main navigation will be a bottom tab bar, with tabs for "Home," "Explore," "Upload," "Profile."
 
-U1. The "Home" tab will display a feed of images and videos from users that the current user is following.
+U1. The "Home" tab will display a feed of images.
 
-U2. The "Explore" tab will allow users to browse and discover new content by hashtags, location, and user.
+U3. The "Upload" tab will allow users to take a photo from their camera roll and  captions before sharing it.
 
-U3. The "Upload" tab will allow users to take a photo or video or select one from their camera roll and add various filters, tags, and captions before sharing it.
-
-U4. The "Profile" tab will display the user's own profile, including their posts, followers, and following.
+U4. The "Profile" tab will display the user's own profile, which will show the images that the user uploaded.
 
 U5. Users will be able to create an account. (Sign up)
 
 U6. Users will be able to upload images.
 
-U7. Users will be able to add captions to the images.
+U7. Users of the image will be able to delete their images.
 
-U8. Users will be able to like other users post.
+U8. Users of the image will be able to sort images by Date and time.
 
-U8. Users will be able to commenting on other users post.
+U9. Users of the image will be able to add captions to the images.
 
-U9. Users will be able to delete comments on their posting.
+U10. Users of the image and other users will be able to comment on each other post.
 
-U10. Users will be able to delete their images.
+U11. Both users will be able to edit their own comments on the image/post.
+
+U12. Users of the image will be able to delete comments on their posting and so will other users.
+
+## 3.1 Stretch Goals
+1. The "Explore" tab will allow users to browse and discover new content by hashtags, location, and user.
+2. The "Home" tab will display a feed of videos from users that the current user is following.
+3. The "Upload" tab will allow users to take a video or select one from their camera roll and add various filters, tags, and captions before sharing it.
+4. The "Profile" tab will display the user's own profile which will display followers and following.
 
 ## 4. Project Scope
 ## 4.1. In Scope
 * Users can signup.
 * Upload images.
-* Adding captions.
-* Like on other users posts.
-* Commenting on other users posts.
 * Delete images.
+* Adding captions.
+* Commenting on other users posts.
+* Deleting comments.
+
 
 ## 4.2. Out of Scope
 * Users can follow other users.
 * Users can edit their images. (cropping, adjusting contrast, brightness, etc.)
 * Users can receive notifications for new followers, likes and comments on their post.
 * Manage settings.
+* Like on other users posts.
 
 ## 5. Architecture Overview
 Pages:
@@ -60,72 +68,60 @@ Pages:
 * Upload: Allows users to upload images to the application.
 * Profile: Allows users to see their uploads, profile picture, bio, etc.
 
-Tables: 
+Tables:
 ```
-  User Table
+  Image Table
   --------------------------------
-  userId:String, partition key 
-  userName:String
-  password:String
+  ownerEmail:String, partition key
+  ownerName:String
+  imageUrl:String
+  dateTime:LocalDateTime, sort Key
+  caption:String
 ```
-
 ```
-  Upload Table
+  Comments Table
   --------------------------------
-  uploadId:String, partition key
-  date:LocalDate, sort key
-  comments:String
-  captions:String
+  imageUrl:String, partition key
+  commenterEmail:String
+  commenterName:String
+  dateTime:LocalDateTime, sort key
+  comment:String
 ```
 ## 6. API
 ## 6.1. Public Models
 ```
 // Image Model
-String uploadId; HashKey
-String comments;
-String captions;
-LocalDate date; SortKey
+String imageId; HashKey
+String imageUrl;
+LocalDateTime dateTime; SortKey
+String caption;
 ```
 ``` 
-// User Model
-String userId; HashKey
-String userName; SortKey
-String passWord;
+// Comments Model
+String commentId; HashKey
+String userEmail; 
+String userId;
+LocalDateTime dateTime; SortKey
+String comment;
 ```
-## 6.1.1 CreateUser
-* Accepts `POST` requests to `/user`.
-* Creates a new User with a uniqueID.
-* Returns the corresponding user with the uniqueID.
-## 6.2. GetUser
-* Accepts `GET` requests to `/user/ID`.
-* Returns the corresponding userID.
-## 6.3. CreateUpload
-* Accepts `POST` requests to `/upload`.
+## 6.1. CreateImage
+* Accepts `POST` requests to `/image`.
 * Creates a uniqueID for that upload.
 * Returns the corresponding upload with that uniqueID.
-## 6.4. GetUpload
-* Accepts `GET` requests to `/upload/ID`.
+## 6.2. GetImage
+* Accepts `GET` requests to `/image/ID`.
 * Returns upload with that uniqueID.
-## 6.5. DeleteUpload
-* Accepts `DELETE` requests to `/upload/ID`.
+## 6.3. DeleteImage
+* Accepts `DELETE` requests to `/image/ID`.
 * Deletes the upload by the uniqueID.
-## 6.6. CreateComments
-* Accepts `POST` requests to `/upload/ID/Comments`.
+## 6.4. CreateComments
+* Accepts `POST` requests to `/userImage/ID/Comments`.
 * Creates a comment for that upload.
 * Returns the comment for that uploadID.
-## 6.7. GetComments
-* Accepts `GET` requests to `/upload/ID/Comments`.
+## 6.5. GetComments
+* Accepts `GET` requests to `/userImage/ID/Comments`.
 * Return comments for that upload
-## 6.8. UpdateComments
-* Accepts `PUT` requests to `/upload/ID/Comments`.
-* Update comments for that upload.
-* Returns the updated comments.
-## 6.9. DeleteComments
-* Accepts `DELETE` requests to `/upload/ID/Comments`.
+## 6.6. DeleteComments
+* Accepts `DELETE` requests to `/userImage/ID/Comments`.
 * Delete comments for that upload.
-## 6.10. CreateCaption
-* Accepts `POST` requests to `/upload/ID/Caption`.
-* Create a caption for that uploadID.
-* Return captions for that uploadID.
-
 
