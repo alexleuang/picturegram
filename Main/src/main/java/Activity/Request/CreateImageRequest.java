@@ -1,76 +1,95 @@
 package Activity.Request;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @JsonDeserialize(builder = CreateImageRequest.Builder.class)
 public class CreateImageRequest {
-    private String uploadId;
-    private String comments;
+    private String ownerEmail;
+    private String ownerName;
+    private String imageUrl;
     private String captions;
-    LocalDate date;
+    LocalDateTime dateTime;
 
-    public CreateImageRequest(String uploadId, String comments, String captions, LocalDate date) {
-        this.uploadId = uploadId;
-        this.comments = comments;
+
+    public CreateImageRequest(String ownerEmail, String ownerName, String imageUrl, String captions, LocalDateTime dateTime) {
+        this.ownerEmail = ownerEmail;
+        this.ownerName = ownerName;
+        this.imageUrl = imageUrl;
         this.captions = captions;
-        this.date = date;
     }
 
-    public String getUploadId() {
-        return uploadId;
+    public String getOwnerEmail() {
+        return ownerEmail;
     }
-
-    public String getComments() {
-        return comments;
-    }
-
+    public String getOwnerName() { return ownerName; }
+    public String getImageUrl() { return imageUrl;}
     public String getCaptions() {
         return captions;
     }
-
-    public LocalDate getDate() {
-        return date;
+    public LocalDateTime getDateTime() {
+        return dateTime;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setDate(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
     }
 
     @Override
     public String toString() {
-        return "CreateUploadRequest{" +
-                "uploadId='" + uploadId + '\'' +
-                ", comments='" + comments + '\'' +
+        return "CreateImageRequest{" +
+                "ownerEmail='" + ownerEmail + '\'' +
+                ", ownerName='" + ownerName + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
                 ", captions='" + captions + '\'' +
-                ", date=" + date +
+                ", dateTime=" + dateTime +
                 '}';
     }
 
     //CHECKSTYLE:OFF:Builder
-    public static CreateImageRequest.Builder builder() {
-        return new CreateImageRequest.Builder();
+    public static Builder builder() {
+        return new Builder();
     }
 
     @JsonPOJOBuilder
     public static class Builder {
-        private String uploadId;
-        private String comments;
+        private String ownerEmail;
+        private String ownerName;
+        private String imageUrl;
         private String captions;
-        LocalDate date;
-    }
+        LocalDateTime dateTime;
 
-    public CreateImageRequest withUploadId(String uploadId) {
-        this.uploadId = uploadId;
-        return this;
-    }
+        public Builder withOwnerEmail(String ownerEmail) {
+            this.ownerEmail = ownerEmail;
+            return this;
+        }
 
-    public CreateImageRequest withComments(String comments) {
-        this.comments = comments;
-        return this;
-    }
+        public Builder withOwnerName(String ownerName) {
+            this.ownerName = ownerName;
+            return this;
+        }
 
-    public CreateImageRequest withCaptions(String captions) {
-        this.captions = captions;
-        return this;
+        public Builder withImageUrl(String imageUrl) {
+            this.imageUrl = imageUrl;
+            return this;
+        }
+
+        public Builder withCaptions(String captions) {
+            this.captions = captions;
+            return this;
+        }
+
+        public Builder withDateTime(LocalDateTime dateTime) {
+            this.dateTime = dateTime;
+            return this;
+        }
+
+        public CreateImageRequest build() {
+            return new CreateImageRequest(
+                    ownerEmail,
+                    ownerName,
+                    imageUrl,
+                    captions,
+                    dateTime);
+        }
     }
 }
