@@ -28,30 +28,33 @@ U5. Users will be able to create an account. (Sign up)
 
 U6. Users will be able to upload images.
 
-U7. Users will be able to add captions to the images.
+U7. Users will be able to delete their images.
 
-U8. Users will be able to like other users post.
+U8. Users will be able to sort images by Date and time.
 
-U8. Users will be able to commenting on other users post.
+U9. Users will be able to add captions to the images.
 
-U9. Users will be able to delete comments on their posting.
+U10. Users will be able to comment on other users post.
 
-U10. Users will be able to delete their images.
+U11. Users will be able to delete comments on their posting.
+
 
 ## 4. Project Scope
 ## 4.1. In Scope
 * Users can signup.
 * Upload images.
-* Adding captions.
-* Like on other users posts.
-* Commenting on other users posts.
 * Delete images.
+* Adding captions.
+* Commenting on other users posts.
+* Deleting comments.
+
 
 ## 4.2. Out of Scope
 * Users can follow other users.
 * Users can edit their images. (cropping, adjusting contrast, brightness, etc.)
 * Users can receive notifications for new followers, likes and comments on their post.
 * Manage settings.
+* Like on other users posts.
 
 ## 5. Architecture Overview
 Pages:
@@ -64,7 +67,8 @@ Tables:
 ```
   Image Table
   --------------------------------
-  imageId:String, partition key
+  ownerEmail:String, partition key
+  ownerName:String
   imageUrl:String
   dateTime:LocalDateTime, sort Key
   caption:String
@@ -72,9 +76,9 @@ Tables:
 ```
   Comments Table
   --------------------------------
-  commentId:String, partition key
-  userEmail:String
-  userId:String
+  imageUrl:String, partition key
+  commenterEmail:String
+  commenterName:String
   dateTime:LocalDateTime, sort key
   comment:String
 ```
