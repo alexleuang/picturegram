@@ -64,37 +64,39 @@ Tables:
 ```
   Image Table
   --------------------------------
-  userImage:String, partition key
-  dateTime:LocalDateTime
+  imageId:String, partition key
+  imageUrl:String
+  dateTime:LocalDateTime, sort Key
   caption:String
 ```
 ```
   Comments Table
   --------------------------------
-  userEmail:String, partition key 
+  commentId:String, partition key
+  userEmail:String
   userId:String
   dateTime:LocalDateTime, sort key
-  imageId:String
   comment:String
 ```
 ## 6. API
 ## 6.1. Public Models
 ```
 // Image Model
-String userImage; HashKey
+String imageId; HashKey
+String imageUrl;
+LocalDateTime dateTime; SortKey
 String caption;
-LocalDate date; SortKey
 ```
 ``` 
 // Comments Model
-String userEmail; HashKey
-String userId; SortKey
-LocalDateTime dateTime;
-String imageId;
+String commentId; HashKey
+String userEmail; 
+String userId;
+LocalDateTime dateTime; SortKey
 String comment;
 ```
 ## 6.1. CreateImage
-* Accepts `POST` requests to `/Image`.
+* Accepts `POST` requests to `/image`.
 * Creates a uniqueID for that upload.
 * Returns the corresponding upload with that uniqueID.
 ## 6.2. GetImage
