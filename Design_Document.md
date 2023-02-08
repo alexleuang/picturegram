@@ -16,13 +16,11 @@ rate the posting.
 ## 3. Use Cases
 The main navigation will be a bottom tab bar, with tabs for "Home," "Explore," "Upload," "Profile."
 
-U1. The "Home" tab will display a feed of images and videos from users that the current user is following.
+U1. The "Home" tab will display a feed of images.
 
-U2. The "Explore" tab will allow users to browse and discover new content by hashtags, location, and user.
+U3. The "Upload" tab will allow users to take a photo from their camera roll and  captions before sharing it.
 
-U3. The "Upload" tab will allow users to take a photo or video or select one from their camera roll and add various filters, tags, and captions before sharing it.
-
-U4. The "Profile" tab will display the user's own profile, including their posts, followers, and following.
+U4. The "Profile" tab will display the user's own profile, which will show the images that the user uploaded.
 
 U5. Users will be able to create an account. (Sign up)
 
@@ -40,6 +38,11 @@ U11. Both users will be able to edit their own comments on the image/post.
 
 U12. Users of the image will be able to delete comments on their posting and so will other users.
 
+## 3.1 Stretch Goals
+1. The "Explore" tab will allow users to browse and discover new content by hashtags, location, and user.
+2. The "Home" tab will display a feed of videos from users that the current user is following.
+3. The "Upload" tab will allow users to take a video or select one from their camera roll and add various filters, tags, and captions before sharing it.
+4. The "Profile" tab will display the user's own profile which will display followers and following.
 
 ## 4. Project Scope
 ## 4.1. In Scope
