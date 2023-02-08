@@ -2,14 +2,14 @@ package Activity.Request;
 
 import java.time.LocalDate;
 
-@JsonDeserialize(builder = CreateUploadRequest.Builder.class)
-public class CreateUploadRequest {
+@JsonDeserialize(builder = CreateImageRequest.Builder.class)
+public class CreateImageRequest {
     private String uploadId;
     private String comments;
     private String captions;
     LocalDate date;
 
-    public CreateUploadRequest(String uploadId, String comments, String captions, LocalDate date) {
+    public CreateImageRequest(String uploadId, String comments, String captions, LocalDate date) {
         this.uploadId = uploadId;
         this.comments = comments;
         this.captions = captions;
@@ -47,8 +47,8 @@ public class CreateUploadRequest {
     }
 
     //CHECKSTYLE:OFF:Builder
-    public static CreateUploadRequest.Builder builder() {
-        return new CreateUploadRequest.Builder();
+    public static CreateImageRequest.Builder builder() {
+        return new CreateImageRequest.Builder();
     }
 
     @JsonPOJOBuilder
@@ -59,17 +59,17 @@ public class CreateUploadRequest {
         LocalDate date;
     }
 
-    public CreateUploadRequest withUploadId(String uploadId) {
+    public CreateImageRequest withUploadId(String uploadId) {
         this.uploadId = uploadId;
         return this;
     }
 
-    public CreateUploadRequest withComments(String comments) {
+    public CreateImageRequest withComments(String comments) {
         this.comments = comments;
         return this;
     }
 
-    public CreateUploadRequest withCaptions(String captions) {
+    public CreateImageRequest withCaptions(String captions) {
         this.captions = captions;
         return this;
     }
