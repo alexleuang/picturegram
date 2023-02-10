@@ -10,15 +10,15 @@ public class CreateImageRequest {
     private String ownerEmail;
     private String ownerName;
     private String imageUrl;
-    private String captions;
+    private String caption;
     LocalDateTime dateTime;
 
 
-    public CreateImageRequest(String ownerEmail, String ownerName, String imageUrl, String captions, LocalDateTime dateTime) {
+    public CreateImageRequest(String ownerEmail, String ownerName, String imageUrl, String caption, LocalDateTime dateTime) {
         this.ownerEmail = ownerEmail;
         this.ownerName = ownerName;
         this.imageUrl = imageUrl;
-        this.captions = captions;
+        this.caption = caption;
     }
 
     public String getOwnerEmail() {
@@ -26,8 +26,8 @@ public class CreateImageRequest {
     }
     public String getOwnerName() { return ownerName; }
     public String getImageUrl() { return imageUrl;}
-    public String getCaptions() {
-        return captions;
+    public String getCaption() {
+        return caption;
     }
     public LocalDateTime getDateTime() {
         return dateTime;
@@ -43,7 +43,7 @@ public class CreateImageRequest {
                 "ownerEmail='" + ownerEmail + '\'' +
                 ", ownerName='" + ownerName + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
-                ", captions='" + captions + '\'' +
+                ", caption='" + caption + '\'' +
                 ", dateTime=" + dateTime +
                 '}';
     }
@@ -58,7 +58,7 @@ public class CreateImageRequest {
         private String ownerEmail;
         private String ownerName;
         private String imageUrl;
-        private String captions;
+        private String caption;
         LocalDateTime dateTime;
 
         public Builder withOwnerEmail(String ownerEmail) {
@@ -76,8 +76,8 @@ public class CreateImageRequest {
             return this;
         }
 
-        public Builder withCaptions(String captions) {
-            this.captions = captions;
+        public Builder withCaption(String caption) {
+            this.caption = caption;
             return this;
         }
 
@@ -91,7 +91,7 @@ public class CreateImageRequest {
                     ownerEmail,
                     ownerName,
                     imageUrl,
-                    captions,
+                    caption,
                     dateTime);
         }
     }

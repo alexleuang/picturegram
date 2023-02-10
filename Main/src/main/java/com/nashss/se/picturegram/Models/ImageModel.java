@@ -5,22 +5,25 @@ import java.util.Objects;
 
 public class ImageModel {
 
-    private final String imageId;
+    private final String ownerEmail;
+    private final String ownerName;
     private final String imageUrl;
     private final String caption;
     LocalDateTime dateTime;
 
-    public ImageModel(String imageId, String imageUrl, String caption, LocalDateTime dateTime) {
-        this.imageId = imageId;
+    public ImageModel(String ownerEmail, String ownerName, String imageUrl, String caption, LocalDateTime dateTime) {
+        this.ownerEmail = ownerEmail;
+        this.ownerName = ownerName;
         this.imageUrl = imageUrl;
         this.caption = caption;
         this.dateTime = dateTime;
     }
 
-    public String getImageId() {
-        return imageId;
+    public String getOwnerEmail() {
+        return ownerEmail;
     }
 
+    public String getOwnerName() { return ownerName; }
     public String getImageUrl() {
         return imageUrl;
     }
@@ -37,12 +40,18 @@ public class ImageModel {
         this.dateTime = dateTime;
     }
 
+    //CHECKSTYLE:OFF:Builder
+    public static Builder builder() {
+        return new Builder();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ImageModel that = (ImageModel) o;
-        return Objects.equals(imageId, that.imageId) &&
+        return Objects.equals(ownerEmail, that.ownerEmail) &&
+                Objects.equals(ownerName, that.ownerName) &&
                 Objects.equals(imageUrl, that.imageUrl) &&
                 Objects.equals(caption, that.caption) &&
                 Objects.equals(dateTime, that.dateTime);
@@ -50,22 +59,23 @@ public class ImageModel {
 
     @Override
     public int hashCode() {
-        return Objects.hash(imageId, imageUrl, caption, dateTime);
-    }
-
-    //CHECKSTYLE:OFF:Builder
-    public static Builder builder() {
-        return new Builder();
+        return Objects.hash(ownerEmail, ownerName, imageUrl, caption, dateTime);
     }
 
     public static class Builder {
-        private String imageId;
+        private String ownerEmail;
+        private String ownerName;
         private String imageUrl;
         private String caption;
         LocalDateTime dateTime;
 
-        public Builder withImageId(String imageId) {
-            this.imageId = imageId;
+        public Builder withOwnerEmail(String ownerEmail) {
+            this.ownerEmail = ownerEmail;
+            return this;
+        }
+
+        public Builder withOwnerName(String ownerName) {
+            this.ownerName = ownerName;
             return this;
         }
 
@@ -85,7 +95,7 @@ public class ImageModel {
         }
 
         public ImageModel build() {
-            return new ImageModel(imageId, imageUrl, caption, dateTime);
+            return new ImageModel(ownerEmail, ownerName, imageUrl, caption, dateTime);
         }
     }
 }
