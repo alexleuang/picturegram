@@ -7,10 +7,10 @@ import java.time.LocalDateTime;
 
 @JsonDeserialize(builder = CreateImageRequest.Builder.class)
 public class CreateImageRequest {
-    private String ownerEmail;
-    private String ownerName;
-    private String imageUrl;
-    private String caption;
+    private final String ownerEmail;
+    private final String ownerName;
+    private final String imageUrl;
+    private final String caption;
     LocalDateTime dateTime;
 
 

@@ -1,6 +1,7 @@
 package com.nashss.se.picturegram.dynamodb;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
+import com.nashss.se.picturegram.Exceptions.ImageNotFoundException;
 import com.nashss.se.picturegram.dynamodb.models.Image;
 
 import javax.inject.Inject;
@@ -16,16 +17,21 @@ public class ImageDao {
         this.dynamoDBMapper = dynamoDbMapper;
     }
 
-    public Image getImage(String ownerEmail) {
-        Image image = this.dynamoDBMapper.load(Image.class, ownerEmail);
+    public Image getImage(String imageUrl) {
+        Image image = this.dynamoDBMapper.load(Image.class, imageUrl);
 
         if (image == null) {
-            throw new OwnerEmailNowFoundException("Could not find email:" + ownerEmail + "for this image.");
+            throw new ImageNotFoundException("Could not find this image:" + imageUrl);
         }
         return image;
     }
 
     public void saveImage(Image image) {
         this.dynamoDBMapper.save(image);
+    }
+
+    public void deleteImage(Image image) {
+        image.setImageUrl(image.getImageUrl());
+        this.dynamoDBMapper.delete(image);
     }
 }

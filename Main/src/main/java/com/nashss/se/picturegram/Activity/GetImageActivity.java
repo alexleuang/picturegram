@@ -2,6 +2,8 @@ package com.nashss.se.picturegram.Activity;
 
 import com.nashss.se.picturegram.Activity.Request.GetImageRequest;
 import com.nashss.se.picturegram.Activity.Results.GetImageResult;
+import com.nashss.se.picturegram.Models.ImageModel;
+import com.nashss.se.picturegram.converters.ModelConverter;
 import com.nashss.se.picturegram.dynamodb.ImageDao;
 import com.nashss.se.picturegram.dynamodb.models.Image;
 import org.apache.logging.log4j.LogManager;
@@ -24,6 +26,7 @@ public class GetImageActivity {
         log.info("Received GetImageRequest {}", getImageRequest);
         String requestedImageUrl = getImageRequest.getImageUrl();
         Image image = imageDao.getImage(requestedImageUrl);
+        ImageModel imageModel = new ModelConverter().toImageModel(image);
 
         return GetImageResult.builder()
                 .withImage(imageModel)

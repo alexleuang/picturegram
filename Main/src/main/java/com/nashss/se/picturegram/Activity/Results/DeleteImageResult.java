@@ -4,20 +4,20 @@ import com.nashss.se.picturegram.Models.ImageModel;
 
 public class DeleteImageResult {
 
-    private final ImageModel imageModel;
+    private final ImageModel image;
 
-    public DeleteImageResult(ImageModel imageModel) {
-        this.imageModel = imageModel;
+    public DeleteImageResult(ImageModel image) {
+        this.image = image;
     }
 
-    public ImageModel getImageModel() {
-        return imageModel;
+    public ImageModel getImage() {
+        return image;
     }
 
     @Override
     public String toString() {
         return "DeleteImageResult{" +
-                "imageModel=" + imageModel +
+                "image=" + image +
                 '}';
     }
 
@@ -27,15 +27,15 @@ public class DeleteImageResult {
     }
 
     public static class Builder {
-        private ImageModel imageModel;
+        private ImageModel image;
 
-        public Builder withImageModel(ImageModel imageModel) {
-            this.imageModel = imageModel;
+        public Builder withImage(ImageModel image) {
+            this.image = image;
             return this;
         }
 
         public DeleteImageResult build() {
-             return new DeleteImageResult(imageModel);
+             return new DeleteImageResult(image);
         }
     }
 }

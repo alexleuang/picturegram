@@ -3,20 +3,18 @@ package com.nashss.se.picturegram.Activity.Results;
 import com.nashss.se.picturegram.Models.ImageModel;
 
 public class GetImageResult {
-     private final ImageModel imageModel;
+     private final ImageModel image;
 
-     private GetImageResult(ImageModel imageModel) {
-         this.imageModel = imageModel;
+     private GetImageResult(ImageModel image) {
+         this.image = image;
      }
 
-     public ImageModel getImageModel() {
-         return imageModel;
-     }
+     public ImageModel getImage() { return image; }
 
     @Override
     public String toString() {
         return "GetImageResult{" +
-                "imageModel=" + imageModel +
+                "image=" + image +
                 '}';
     }
 
@@ -26,15 +24,15 @@ public class GetImageResult {
     }
 
     public static class Builder {
-         private ImageModel imageModel;
+         private ImageModel image;
 
-         public Builder withImage(ImageModel imageModel) {
-             this.imageModel = imageModel;
+         public Builder withImage(ImageModel image) {
+             this.image = image;
              return this;
          }
 
          public GetImageResult build() {
-             return new GetImageResult(imageModel);
+             return new GetImageResult(image);
          }
     }
 }
