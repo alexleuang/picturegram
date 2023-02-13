@@ -1,5 +1,6 @@
 package com.nashss.se.picturegram.lambda;
 
+import com.nashss.se.picturegram.dependency.DaggerServiceComponent;
 import com.nashss.se.picturegram.dependency.ServiceComponent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
