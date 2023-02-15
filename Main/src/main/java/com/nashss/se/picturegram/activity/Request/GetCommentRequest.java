@@ -1,10 +1,9 @@
-package com.nashss.se.picturegram.Activity.Request;
+package com.nashss.se.picturegram.activity.Request;
 
-public class DeleteImageRequest {
+public class GetCommentRequest {
+    private final String imageUrl;
 
-    private String imageUrl;
-
-    private DeleteImageRequest(String imageUrl) {
+    private GetCommentRequest(String imageUrl) {
         this.imageUrl = imageUrl;
     }
 
@@ -12,13 +11,9 @@ public class DeleteImageRequest {
         return imageUrl;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
     @Override
     public String toString() {
-        return "DeleteImageRequest{" +
+        return "GetCommentRequest{" +
                 "imageUrl='" + imageUrl + '\'' +
                 '}';
     }
@@ -29,7 +24,6 @@ public class DeleteImageRequest {
     }
 
     public static class Builder {
-
         private String imageUrl;
 
         public Builder withImageUrl(String imageUrl) {
@@ -37,8 +31,8 @@ public class DeleteImageRequest {
             return this;
         }
 
-        public DeleteImageRequest build() {
-            return new DeleteImageRequest(imageUrl);
+        public GetCommentRequest build() {
+            return new GetCommentRequest(imageUrl);
         }
     }
 }

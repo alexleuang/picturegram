@@ -1,4 +1,4 @@
-package com.nashss.se.picturegram.Activity.Request;
+package com.nashss.se.picturegram.activity.Request;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;

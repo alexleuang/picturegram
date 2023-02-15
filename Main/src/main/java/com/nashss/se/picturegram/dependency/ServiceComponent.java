@@ -1,8 +1,8 @@
 package com.nashss.se.picturegram.dependency;
 
-import com.nashss.se.picturegram.Activity.CreateImageActivity;
-import com.nashss.se.picturegram.Activity.DeleteImageActivity;
-import com.nashss.se.picturegram.Activity.GetImageActivity;
+import com.nashss.se.picturegram.activity.CreateImageActivity;
+import com.nashss.se.picturegram.activity.DeleteImageActivity;
+import com.nashss.se.picturegram.activity.GetImageActivity;
 import dagger.Component;
 
 import javax.inject.Singleton;

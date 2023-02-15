@@ -2,8 +2,8 @@ package com.nashss.se.picturegram.lambda;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.nashss.se.picturegram.Activity.Request.GetImageRequest;
-import com.nashss.se.picturegram.Activity.Results.GetImageResult;
+import com.nashss.se.picturegram.activity.Request.GetImageRequest;
+import com.nashss.se.picturegram.activity.Results.GetImageResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

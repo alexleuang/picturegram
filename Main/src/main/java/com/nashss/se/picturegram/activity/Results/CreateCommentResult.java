@@ -1,4 +1,4 @@
-package com.nashss.se.picturegram.Activity.Results;
+package com.nashss.se.picturegram.activity.Results;
 
 public class CreateCommentResult {
 //    private final CommentModel commentModel;

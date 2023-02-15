@@ -1,7 +1,7 @@
-package com.nashss.se.picturegram.Activity;
+package com.nashss.se.picturegram.activity;
 
-import com.nashss.se.picturegram.Activity.Request.GetImageRequest;
-import com.nashss.se.picturegram.Activity.Results.GetImageResult;
+import com.nashss.se.picturegram.activity.Request.GetImageRequest;
+import com.nashss.se.picturegram.activity.Results.GetImageResult;
 import com.nashss.se.picturegram.Models.ImageModel;
 import com.nashss.se.picturegram.converters.ModelConverter;
 import com.nashss.se.picturegram.dynamodb.ImageDao;

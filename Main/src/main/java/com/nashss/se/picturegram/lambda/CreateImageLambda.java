@@ -2,8 +2,8 @@ package com.nashss.se.picturegram.lambda;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
-import com.nashss.se.picturegram.Activity.Request.CreateImageRequest;
-import com.nashss.se.picturegram.Activity.Results.CreateImageResult;
+import com.nashss.se.picturegram.activity.Request.CreateImageRequest;
+import com.nashss.se.picturegram.activity.Results.CreateImageResult;
 
 public class CreateImageLambda extends LambdaActivityRunner<CreateImageRequest, CreateImageResult>
     implements RequestHandler<AuthenticatedLambdaRequest<CreateImageRequest>, LambdaResponse> {

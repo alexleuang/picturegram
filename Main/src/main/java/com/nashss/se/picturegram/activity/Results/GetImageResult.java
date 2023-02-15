@@ -1,4 +1,4 @@
-package com.nashss.se.picturegram.Activity.Results;
+package com.nashss.se.picturegram.activity.Results;
 
 import com.nashss.se.picturegram.Models.ImageModel;
 

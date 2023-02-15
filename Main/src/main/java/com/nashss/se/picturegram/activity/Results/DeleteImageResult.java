@@ -1,11 +1,12 @@
-package com.nashss.se.picturegram.Activity.Results;
+package com.nashss.se.picturegram.activity.Results;
 
 import com.nashss.se.picturegram.Models.ImageModel;
 
-public class CreateImageResult {
+public class DeleteImageResult {
+
     private final ImageModel image;
 
-    private CreateImageResult(ImageModel image) {
+    public DeleteImageResult(ImageModel image) {
         this.image = image;
     }
 
@@ -15,11 +16,12 @@ public class CreateImageResult {
 
     @Override
     public String toString() {
-        return "CreateImageResult{" +
+        return "DeleteImageResult{" +
                 "image=" + image +
                 '}';
     }
 
+    //CHECKSTYLE:OFF:Builder
     public static Builder builder() {
         return new Builder();
     }
@@ -32,8 +34,8 @@ public class CreateImageResult {
             return this;
         }
 
-        public CreateImageResult build() {
-            return new CreateImageResult(image);
+        public DeleteImageResult build() {
+             return new DeleteImageResult(image);
         }
     }
 }
