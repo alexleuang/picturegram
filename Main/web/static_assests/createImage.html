@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="assets/createImage.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="background">
+<header class="header" id="header"></header>
+<div class="card">
+    <h2>Create Image</h2>
+    <form class="card-content" id="create-image-form">
+        <p class="hidden error" id="error-message"> </p>
+        <p class="form-field">
+            <label>Upload Image</label>
+            <input type="text" required class="validated-field" id="upload image " placeholder="smooth-jamz"
+                   autofocus>
+        </p>
+        <p class="form-field">
+            <label>Tags</label>
+            <input type="text" id="tags" class="tags" placeholder="tag1,tag2"
+                   data-tip="Must be a comma separated list of tags">
+        </p>
+        <p>
+            <a href="#" class="button" id="upload">Upload Image</a>
+        </p>
+    </form>
+</div>
+</body>
+</html>
