@@ -8,4 +8,4 @@
  */
 
 rootProject.name = 'picturegram'
-include('app')
+include('Main')
