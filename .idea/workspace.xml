@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d219779e-7808-4bad-89f4-1e83cc9194c2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/components/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/components/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/pages/createImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/pages/createImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static_assests/createImage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/createImage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static_assests/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

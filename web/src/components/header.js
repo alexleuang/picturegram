@@ -1,4 +1,4 @@
-import MusicPlaylistClient from '../api/picturegramClient';
+import PicturegramClient from '../api/picturegramClient';
 import BindingClass from "../util/bindingClass";
 
 /**
@@ -14,7 +14,7 @@ export default class Header extends BindingClass {
         ];
         this.bindClassMethods(methodsToBind, this);
 
-        this.client = new picturegramClient();
+        this.client = new PicturegramClient();
     }
 
     /**
