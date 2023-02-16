@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d219779e-7808-4bad-89f4-1e83cc9194c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/web/src/api/authenticator.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/web/src/api/picturegramClient.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/web/src/components/header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/web/src/pages/createImage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/web/src/util/DataStore.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/web/src/util/bindingClass.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/web/static_assests/createImage.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/web/static_assests/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

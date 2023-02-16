@@ -243,7 +243,7 @@ Resources:
           Variables:
             JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
         Events:
-          MusicPlaylistService:
+          Picturegram:
             Type: Api
             Properties:
               Path: /image
@@ -265,7 +265,7 @@ Resources:
           Variables:
             JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
         Events:
-          MusicPlaylistService:
+          Picturegram:
             Type: Api
             Properties:
               Path: /image/{id}
@@ -287,7 +287,7 @@ Resources:
           Variables:
             JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
         Events:
-          MusicPlaylistService:
+          Picturegram:
             Type: Api
             Properties:
               Path: /image/{id}
