@@ -7,7 +7,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-@DynamoDBTable(tableName = "Images")
+@DynamoDBTable(tableName = "Image")
 public class Image {
     private String ownerEmail;
     private String ownerName;
