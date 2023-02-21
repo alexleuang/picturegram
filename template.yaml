@@ -8,7 +8,7 @@ Parameters:
   CognitoDomain:
     Type: String
     Description: A name for the cognito Domain
-    Default: "Picturegram"
+    Default: "picturegram"
   S3Bucket:
     Type: String
     Description: Parameter to specify the S3 Bucket to use for deployment
@@ -73,38 +73,38 @@ Resources:
           Mutable: true
           Required: true
 
-    UserPoolClient:
-      Type: AWS::Cognito::UserPoolClient
-      Properties:
-        UserPoolId: !Ref UserPool
-        AllowedOAuthFlowsUserPoolClient: true
-        CallbackURLs:
-          - !If
-            - DeployCloudFront
-            - !Sub "https://${CloudfrontDistribution.DomainName}"
-            - http://localhost:8000
-        LogoutURLs:
-          - !If
-            - DeployCloudFront
-            - !Sub "https://${CloudfrontDistribution.DomainName}"
-            - http://localhost:8000
-        AllowedOAuthFlows:
-          - code
-          - implicit
-        AllowedOAuthScopes:
-          - phone
-          - email
-          - openid
-          - profile
-        SupportedIdentityProviders:
-          - COGNITO
-        PreventUserExistenceErrors: ENABLED
+  UserPoolClient:
+    Type: AWS::Cognito::UserPoolClient
+    Properties:
+      UserPoolId: !Ref UserPool
+      AllowedOAuthFlowsUserPoolClient: true
+      CallbackURLs:
+        - !If
+          - DeployCloudFront
+          - !Sub "https://${CloudfrontDistribution.DomainName}"
+          - http://localhost:8000
+      LogoutURLs:
+        - !If
+          - DeployCloudFront
+          - !Sub "https://${CloudfrontDistribution.DomainName}"
+          - http://localhost:8000
+      AllowedOAuthFlows:
+        - code
+        - implicit
+      AllowedOAuthScopes:
+        - phone
+        - email
+        - openid
+        - profile
+      SupportedIdentityProviders:
+        - COGNITO
+      PreventUserExistenceErrors: ENABLED
 
-    UserPoolDomain:
-      Type: AWS::Cognito::UserPoolDomain
-      Properties:
-        Domain: !Ref CognitoDomain
-        UserPoolId: !Ref UserPool
+  UserPoolDomain:
+    Type: AWS::Cognito::UserPoolDomain
+    Properties:
+      Domain: !Ref CognitoDomain
+      UserPoolId: !Ref UserPool
 
   #-----------------------------------------------------
   # CloudFront Configuration
@@ -169,8 +169,7 @@ Resources:
   #-----------------------------------------------------
   # Role/Permissions/Policy Configuration
   #-----------------------------------------------------
-
-  AccessDynamoDBTablesRole:
+  AccessRole:
     Type: AWS::IAM::Role
     Properties:
       ManagedPolicyArns:
@@ -243,11 +242,11 @@ Resources:
           Variables:
             JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
         Events:
-          MusicPlaylistService:
+          Picturegram:
             Type: Api
             Properties:
               Path: /image
-              Method: get
+              Method: post
               Auth:
                 Authorizer: 'NONE'
 
@@ -265,7 +264,7 @@ Resources:
           Variables:
             JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
         Events:
-          MusicPlaylistService:
+          Picturegram:
             Type: Api
             Properties:
               Path: /image/{id}
@@ -287,11 +286,11 @@ Resources:
           Variables:
             JAVA_TOOL_OPTIONS: -XX:+TieredCompilation -XX:TieredStopAtLevel=1
         Events:
-          MusicPlaylistService:
+          Picturegram:
             Type: Api
             Properties:
               Path: /image/{id}
-              Method: get
+              Method: delete
               Auth:
                 Authorizer: 'NONE'
 
@@ -304,17 +303,13 @@ Resources:
       AttributeDefinitions:
         - AttributeName: "ownerEmail"
           AttributeType: "S"
-        - AttributeName: "ownerName"
-          AttributeType: "S"
-        - AttributeName: "imageUrl"
-          AttributeType: "S"
-        - AttributeName: "caption"
-          AttributeType: "S"
         - AttributeName: "dateTime"
           AttributeType: "S"
       KeySchema:
-        - AttributeName: "id"
+        - AttributeName: "ownerEmail"
           KeyType: "HASH"
+        - AttributeName: "dateTime"
+          KeyType: "RANGE"
       BillingMode: "PAY_PER_REQUEST"
       TableName: "image"
 
