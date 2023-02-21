@@ -8,6 +8,6 @@ architecture = "x86_64"
 handler = "com.nashss.se.picturegram.lambda.CreateImageLambda::handleRequest"
 manifest_hash = ""
 packagetype = "Zip"
-functions = ["CreateImageLambda", "GetImageLambda", "DeleteImageLambda"]
+functions = ["CreateImageLambda", "GetImageLambda"]
 
 [layer_build_definitions]

@@ -17,11 +17,11 @@ public class ImageDao {
         this.dynamoDBMapper = dynamoDbMapper;
     }
 
-    public Image getImage(String imageUrl) {
-        Image image = this.dynamoDBMapper.load(Image.class, imageUrl);
+    public Image getOwnerEmail(String ownerEmail) {
+        Image image = this.dynamoDBMapper.load(Image.class, ownerEmail);
 
         if (image == null) {
-            throw new ImageNotFoundException("Could not find this image:" + imageUrl);
+            throw new ImageNotFoundException("Could not find this image for this email:" + ownerEmail);
         }
         return image;
     }

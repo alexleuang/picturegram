@@ -1,5 +1,6 @@
 package com.nashss.se.picturegram.activity;
 
+import com.nashss.se.picturegram.Exceptions.ImageNotFoundException;
 import com.nashss.se.picturegram.activity.Request.GetImageRequest;
 import com.nashss.se.picturegram.activity.Results.GetImageResult;
 import com.nashss.se.picturegram.Models.ImageModel;
@@ -24,12 +25,15 @@ public class GetImageActivity {
 
     public GetImageResult handleRequest(final GetImageRequest getImageRequest) {
         log.info("Received GetImageRequest {}", getImageRequest);
-        String requestedImageUrl = getImageRequest.getImageUrl();
-        Image image = imageDao.getImage(requestedImageUrl);
-        ImageModel imageModel = new ModelConverter().toImageModel(image);
+        String requestedOwnerEmail = getImageRequest.getOwnerEmail();
+        Image image = imageDao.getOwnerEmail(requestedOwnerEmail);
+//        ImageModel imageModel = new ModelConverter().toImageModel(image);
 
+        if (image ==null) {
+            throw new ImageNotFoundException("Image not found" + requestedOwnerEmail);
+        }
         return GetImageResult.builder()
-                .withImage(imageModel)
+                .withOwnerEmail(image)
                 .build();
     }
 }

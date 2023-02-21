@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d219779e-7808-4bad-89f4-1e83cc9194c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/LocalDateTimeConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteImageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetImageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Request/GetImageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Request/GetImageRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetImageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetImageResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dependency/ServiceComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dependency/ServiceComponent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/ImageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/ImageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/lambda/DeleteImageLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/lambda/DeleteImageLambda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/lambda/GetImageLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/lambda/GetImageLambda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +66,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -67,13 +84,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/alexleuang/workspace/u5-ProjectTemplate"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alexleuang/workspace/u5-ProjectTemplate&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="picturegram:Main [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
