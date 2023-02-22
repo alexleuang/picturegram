@@ -14,6 +14,6 @@ public class LocalDateTimeConverter implements DynamoDBTypeConverter<String, Loc
 
         @Override
         public LocalDateTime unconvert(String object) {
-            return (object == null) ? null : LocalDateTime.parse(object, DateTimeFormatter.ISO_LOCAL_DATE);
+            return (object == null) ? null : LocalDateTime.parse(object, DateTimeFormatter.ISO_LOCAL_DATE_TIME);
         }
 }

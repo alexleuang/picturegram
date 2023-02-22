@@ -79,7 +79,7 @@ export default class PicturegramClient extends BindingClass {
      */
     async getImage(id, errorCallback) {
         try {
-            const response = await this.axiosClient.get(`image/${id}`);
+            const response = await this.axiosClient.get(`image/${ownerEmail}`);
             return response.data.playlist;
         } catch (error) {
             this.handleError(error, errorCallback)
@@ -94,7 +94,7 @@ export default class PicturegramClient extends BindingClass {
      */
     async deleteImage(id, errorCallback) {
         try {
-            const response = await this.axiosClient.get(`image/${id}`);
+            const response = await this.axiosClient.get(`image/${ownerEmail}`);
             return response.data.songList;
         } catch (error) {
             this.handleError(error, errorCallback)
@@ -110,7 +110,7 @@ export default class PicturegramClient extends BindingClass {
      */
     async createImage(ownerEmail, ownerName, caption, errorCallback) {
         try {
-            const token = await this.getTokenOrThrow("Only authenticated users can create playlists.");
+            const token = await this.getTokenOrThrow("Only authenticated users uploads an image.");
             const response = await this.axiosClient.post(`image`, {
                 ownerEmail: ownerEmail,
                 ownerName: ownerName,

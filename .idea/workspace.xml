@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d219779e-7808-4bad-89f4-1e83cc9194c2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/LocalDateTimeConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteImageActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetImageActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Request/GetImageRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Request/GetImageRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetImageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetImageResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dependency/ServiceComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dependency/ServiceComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/ImageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/ImageDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/lambda/DeleteImageLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/lambda/DeleteImageLambda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/lambda/GetImageLambda.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/lambda/GetImageLambda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/CreateImageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/CreateImageResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/LocalDateTimeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/LocalDateTimeConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/api/picturegramClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/picturegramClient.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static_assets/createImage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/createImage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,13 +84,13 @@
     &quot;last_opened_file_path&quot;: &quot;/home/alexleuang/workspace/u5-ProjectTemplate&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Remote JVM Debug.debugger">
     <configuration name="picturegram:Main [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/Main" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -113,6 +106,23 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="debugger" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.picturegram:Main [build]" />
+      <item itemvalue="Remote JVM Debug.debugger" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.picturegram:Main [build]" />
