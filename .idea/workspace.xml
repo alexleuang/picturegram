@@ -5,11 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d219779e-7808-4bad-89f4-1e83cc9194c2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/Exceptions/CommentNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/CreateCommentActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteCommentActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetCommentActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/CommentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/utils/CollectionUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/CreateImageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/CreateImageResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/LocalDateTimeConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/LocalDateTimeConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/src/api/picturegramClient.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/api/picturegramClient.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/static_assets/createImage.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static_assets/createImage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/Models/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/Models/CommentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/CreateImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/CreateImageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteImageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetImageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Request/DeleteCommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Request/DeleteCommentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/CreateCommentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/CreateCommentResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/DeleteCommentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/DeleteCommentResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetCommentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetCommentResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetImageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetImageResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/ModelConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/ModelConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

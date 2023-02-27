@@ -1,6 +1,8 @@
 package com.nashss.se.picturegram.converters;
 
+import com.nashss.se.picturegram.Models.CommentModel;
 import com.nashss.se.picturegram.Models.ImageModel;
+import com.nashss.se.picturegram.dynamodb.models.Comment;
 import com.nashss.se.picturegram.dynamodb.models.Image;
 
 public class ModelConverter {
@@ -13,5 +15,16 @@ public class ModelConverter {
                 .withCaption(image.getCaption())
                 .withLocalDateTime(image.getDateTime())
                 .build();
+    }
+
+    public CommentModel toCommentModel(Comment comment) {
+        return CommentModel.builder()
+                .withImageUrl(comment.getImageUrl())
+                .withCommenterEmail(comment.getCommenterEmail())
+                .withCommenterName(comment.getCommenterName())
+                .withComment(comment.getComment())
+                .withLocalDateTime(comment.getDateTime())
+                .build();
+
     }
 }

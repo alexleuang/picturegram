@@ -27,13 +27,13 @@ public class GetImageActivity {
         log.info("Received GetImageRequest {}", getImageRequest);
         String requestedOwnerEmail = getImageRequest.getOwnerEmail();
         Image image = imageDao.getOwnerEmail(requestedOwnerEmail);
-//        ImageModel imageModel = new ModelConverter().toImageModel(image);
+        ImageModel imageModel = new ModelConverter().toImageModel(image);
 
-        if (image ==null) {
-            throw new ImageNotFoundException("Image not found" + requestedOwnerEmail);
-        }
+//        if (image ==null) {
+//            throw new ImageNotFoundException("Image not found" + requestedOwnerEmail);
+//        }
         return GetImageResult.builder()
-                .withOwnerEmail(image)
+                .withOwnerEmail(imageModel)
                 .build();
     }
 }

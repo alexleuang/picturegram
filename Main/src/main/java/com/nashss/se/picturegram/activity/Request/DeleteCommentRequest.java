@@ -31,7 +31,7 @@ public class DeleteCommentRequest {
 
         private String imageUrl;
 
-        public DeleteCommentRequest.Builder withImageUrl(String imageUrl) {
+        public Builder withImageUrl(String imageUrl) {
             this.imageUrl = imageUrl;
             return this;
         }
