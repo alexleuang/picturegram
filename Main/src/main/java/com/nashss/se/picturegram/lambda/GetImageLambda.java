@@ -19,7 +19,7 @@ public class GetImageLambda  extends LambdaActivityRunner<GetImageRequest, GetIm
         return super.runActivity(
                 () -> input.fromPath(path ->
                         GetImageRequest.builder()
-                                .withImageUrl(path.get("Image"))
+                                .withOwnerEmail(path.get("ownerEmail"))
                                 .build()),
                 (request, serviceComponent) ->
                         serviceComponent.provideGetImageActivity().handleRequest(request)

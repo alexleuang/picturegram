@@ -29,11 +29,11 @@ public class DeleteImageActivity {
             throw new ImageNotFoundException("Image not found.");
         }
 
-        if (imageDao.getImage(deleteImageRequest.getImageUrl()) == null) {
+        if (imageDao.getOwnerEmail(deleteImageRequest.getImageUrl()) == null) {
             throw new ImageNotFoundException("Image not found");
         }
 
-        Image imageDeleted = imageDao.getImage(deleteImageRequest.getImageUrl());
+        Image imageDeleted = imageDao.getOwnerEmail(deleteImageRequest.getImageUrl());
 
         imageDao.deleteImage(imageDeleted);
 

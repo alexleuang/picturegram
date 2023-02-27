@@ -5,8 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d219779e-7808-4bad-89f4-1e83cc9194c2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/Exceptions/CommentNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/CreateCommentActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteCommentActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetCommentActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/CommentDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/utils/CollectionUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/Models/CommentModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/Models/CommentModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/CreateImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/CreateImageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/DeleteImageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetImageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/GetImageActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Request/DeleteCommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Request/DeleteCommentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/CreateCommentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/CreateCommentResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/DeleteCommentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/DeleteCommentResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetCommentResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetCommentResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetImageResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/activity/Results/GetImageResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/ModelConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/converters/ModelConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main/src/main/java/com/nashss/se/picturegram/dynamodb/models/Image.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +73,13 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -67,20 +91,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/alexleuang/workspace/u5-ProjectTemplate"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/alexleuang/workspace/u5-ProjectTemplate&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="Remote JVM Debug.debugger">
     <configuration name="picturegram:Main [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/Main" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -96,6 +120,23 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="debugger" type="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <option name="AUTO_RESTART" value="false" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.picturegram:Main [build]" />
+      <item itemvalue="Remote JVM Debug.debugger" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.picturegram:Main [build]" />

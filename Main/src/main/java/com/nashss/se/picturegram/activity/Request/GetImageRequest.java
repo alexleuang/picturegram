@@ -2,20 +2,20 @@ package com.nashss.se.picturegram.activity.Request;
 
 
 public class GetImageRequest {
-    private final String imageUrl;
+    private final String ownerEmail;
 
-    private GetImageRequest(String imageUrl) {
-        this.imageUrl = imageUrl;
+    private GetImageRequest(String ownerEmail) {
+        this.ownerEmail = ownerEmail;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getOwnerEmail() {
+        return ownerEmail;
     }
 
     @Override
     public String toString() {
         return "GetImageRequest{" +
-                "imageUrl='" + imageUrl + '\'' +
+                "ownerEmail='" + ownerEmail + '\'' +
                 '}';
     }
 
@@ -25,13 +25,13 @@ public class GetImageRequest {
     }
 
     public static class Builder {
-        private String imageUrl;
-        public Builder withImageUrl(String imageUrl) {
-            this.imageUrl = imageUrl;
+        private String ownerEmail;
+        public Builder withOwnerEmail(String ownerEmail) {
+            this.ownerEmail = ownerEmail;
             return this;
         }
         public GetImageRequest build() {
-            return new GetImageRequest(imageUrl);
+            return new GetImageRequest(ownerEmail);
         }
     }
 }

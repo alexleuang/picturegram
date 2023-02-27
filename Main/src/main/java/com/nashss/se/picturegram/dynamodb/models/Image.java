@@ -1,13 +1,12 @@
 package com.nashss.se.picturegram.dynamodb.models;
 
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
+import com.amazonaws.services.dynamodbv2.datamodeling.*;
+import com.nashss.se.picturegram.converters.LocalDateTimeConverter;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
-@DynamoDBTable(tableName = "Image")
+@DynamoDBTable(tableName = "image")
 public class Image {
     private String ownerEmail;
     private String ownerName;
@@ -50,7 +49,7 @@ public class Image {
     public void setCaption(String caption) {
         this.caption = caption;
     }
-
+    @DynamoDBTypeConverted(converter = LocalDateTimeConverter.class)
     @DynamoDBAttribute(attributeName = "dateTime")
     public LocalDateTime getDateTime() {
         return dateTime;
@@ -59,7 +58,6 @@ public class Image {
     public void setDateTime(LocalDateTime dateTime) {
         this.dateTime = dateTime;
     }
-
 
     @Override
     public boolean equals(Object o) {

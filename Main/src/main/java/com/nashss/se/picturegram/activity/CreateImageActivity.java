@@ -26,16 +26,16 @@ public class CreateImageActivity {
         log.info("Received CreateImageRequest {}", createImageRequest);
 
 
-        Image image = new Image();
-        image.setImageUrl(createImageRequest.getImageUrl());
-        image.setOwnerEmail(createImageRequest.getOwnerEmail());
-        image.setOwnerName(createImageRequest.getOwnerName());
-        image.setCaption(createImageRequest.getCaption());
-        image.setDateTime(LocalDateTime.now());
+        Image newImage = new Image();
+        newImage.setImageUrl(createImageRequest.getImageUrl());
+        newImage.setOwnerEmail(createImageRequest.getOwnerEmail());
+        newImage.setOwnerName(createImageRequest.getOwnerName());
+        newImage.setCaption(createImageRequest.getCaption());
+        newImage.setDateTime(LocalDateTime.now());
 
-        imageDao.saveImage(image);
+        imageDao.saveImage(newImage);
 
-        ImageModel imageModel = new ModelConverter().toImageModel(image);
+        ImageModel imageModel = new ModelConverter().toImageModel(newImage);
         return CreateImageResult.builder()
                 .withImage(imageModel)
                 .build();
